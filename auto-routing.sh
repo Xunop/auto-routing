@@ -3,8 +3,10 @@
 # If error occurs, exit
 set -e
 
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
 # Domains from `domain` file
-DOMAINS=($(cat domain))
+DOMAINS=($(cat "$SCRIPT_DIR/domain"))
 
 # Table ID
 # TABLE_ID=200

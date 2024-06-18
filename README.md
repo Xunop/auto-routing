@@ -11,3 +11,14 @@ GlobalProtect-openconnect 会建一个 tun0 的接口，并配置路由表，
 查看配置的路由，会发现将默认的流量转发到 tun0，所以只要稍稍删掉这个路由就好了。
 
 所以这个脚本就是删掉一个路由然后加上我们需要的一些路由。
+
+## Getting Start
+
+```sh
+# 创建 Hooks 脚本目录
+sudo mkdir /etc/vpnc/post-connect.d
+# 创一个软链接方便之后更新
+cd $_ && ln -s /your/path/auto-routing.sh
+```
+
+这样每次启动 VPN 时都会自动运行这个脚本。
