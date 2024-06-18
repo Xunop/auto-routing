@@ -3,7 +3,8 @@
 # If error occurs, exit
 set -e
 
-SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+# /etc/vpnc
+SCRIPT_DIR=$(dirname $(realpath $0))
 
 # Domains from `domain` file
 DOMAINS=($(cat "$SCRIPT_DIR/domain"))
