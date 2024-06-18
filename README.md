@@ -22,3 +22,5 @@ cd $_ && ln -s /your/path/auto-routing.sh
 ```
 
 这样每次启动 VPN 时都会自动运行这个脚本。
+
+`ip route show dev tun0` 可以查看一下结果对不对。
