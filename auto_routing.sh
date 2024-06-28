@@ -58,6 +58,10 @@ is_valid_ip() {
 }
 
 for DOMAIN in "${DOMAINS[@]}"; do
+    if is_valid_ip $DOMAIN; then
+        sudo ip route add $DOMAIN dev $VPN_IFACE || true
+    fi
+
     IPS=$(resolve_domain $DOMAIN)
     
     for IP in $IPS; do
