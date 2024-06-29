@@ -21,7 +21,7 @@ GlobalProtect-openconnect 会建一个 tun0 的接口，并配置路由表，
 # 创建 Hooks 脚本目录
 sudo mkdir /etc/vpnc/post-connect.d
 # 创一个软链接方便之后更新
-cd $_ && ln -s /your/path/auto-routing.sh
+cd $_ && ln -s /your/path/auto_routing.sh
 ```
 
 这样每次启动 VPN 时都会自动运行这个脚本。
